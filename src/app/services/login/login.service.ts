@@ -24,17 +24,17 @@ export class LoginService {
     return this.http.post('http://54.251.83.205:9091/api/v1/jobseeker/reset', params);
   }
 
-  public changePassword(data: any): Observable<any> {
+  public changePassword(body: any): Observable<any> {
     const params = new HttpParams()
-      .set('email', data.email)
-      .set('password', data.password)
-      .set('confirmPassword', data.confirmPassword);
+      .set('email', body.email)
+      .set('password', body.password)
+      .set('confirmPassword', body.confirmPassword);
 
-    return this.http.post('http://54.251.83.205:9091/api/v1/jobseeker/change-password', data);
+    return this.http.post('http://54.251.83.205:9091/api/v1/jobseeker/change-password', params);
   }
 
   saveChangePasswordData(data: any) {
-    sessionStorage.setItem('change-password/:token', JSON.stringify(data))
+    sessionStorage.setItem('change-password', JSON.stringify(data))
   }
 
   public getUserProfile(body: any): Observable<unknown> {

@@ -9,8 +9,7 @@ import { Observable } from 'rxjs';
 export class RegisterService {
 
   constructor(
-    private http: HttpClient,
-    private router: Router
+    private http: HttpClient
   ) { }
 
   saveRegisterData(userData: any) {

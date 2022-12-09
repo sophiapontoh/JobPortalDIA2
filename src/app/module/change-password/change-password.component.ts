@@ -71,28 +71,7 @@ export class ChangePasswordComponent implements OnInit {
       }
     )
   }
-
-  onChangePassword() {
-    this.loginService.changePassword(this.changePasswordModel.formGroupChangePassword.value).subscribe(
-      (response) => {
-        this.loginService.saveChangePasswordData(response.data)
-        this.loginService.changePassword(response.data)
-        this.router.navigate(['login'])
-        this.toastr.success('Your password has been successfully changed. Try to login now.', 'Success')
-      },
-      (error) => {
-  }
-  )}
 }
 
-  // getToken() {
-  //   this.loginService.verifyUser(this.changePasswordModel.token.value).subscribe(
-  //     (response) => {
-  //       this.loginService.verifyUser(response.data)
-  //     },
-  //     (error) => {
-  //     }
-  //   )
-  // }
 
 

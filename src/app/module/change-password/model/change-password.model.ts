@@ -18,5 +18,20 @@ export class ChangePasswordModel {
         );
       }
 
+      responseReset: any = {
+      }
+  
+      isInvalidChangePassword() {
+          if (typeof this.responseReset.code !== 'undefined') {
+              if (this.responseReset.code !== 200) {
+                  return true;
+              } else {
+                  return false;
+              }
+          } else {
+              return true;
+          }
+      }
+
     
 }
