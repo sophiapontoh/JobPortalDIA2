@@ -1,0 +1,30 @@
+<div class="modal-dialog">
+    <div class="modal-content border-0">
+        <div class="modal-header border-0">
+            <h5 class="modal-title" id="exampleModalLabel">Input e-mail</h5>
+            <button (click)="activeModal.dismiss('Cross click')" type="button" class="btn-close"
+             data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div>
+            <p class="text-position">We will send the e-mail verification to your e-mail</p>
+        </div>
+        <form class="form-group" [formGroup]="verifModel.formGroupRegister" (ngSubmit)="verifyEmail()">
+            <div class="form-group text-position-p">
+                <p class="text-gray-900">Input e-mail</p>
+                <input formControlName="jobseekerEmail" type="email" 
+                *ngIf="verifModel.formGroupRegister.controls['jobseekerEmail']"
+                placeholder="yourpersonal@mail.com" class="form-control form-control-user"id="exampleInputEmail" 
+                aria-describedby="emailHelp" required>
+                <div class="text-three"
+                    *ngIf="!verifModel.formGroupRegister.controls['jobseekerEmail'].valid">
+                    <span style="color: #EB5757;">A field is required</span>
+                </div>
+            </div>
+        </form>
+        <div>
+            <button class="btn bg-primary rounded-pill" >
+                Send e-mail verification
+            </button>
+        </div>
+    </div>
+</div>

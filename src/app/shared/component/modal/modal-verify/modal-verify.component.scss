@@ -1,0 +1,66 @@
+.modal-header {
+    padding-top: 0;
+    margin-top: 30px;
+    margin-left: 20px;
+
+    h5 {
+        font-weight: 600;
+        width: 180px;
+    }
+}
+
+input[type='button'] {
+    width: 200px;
+    z-index: 1000;
+}
+
+.text-position{
+    position: relative;
+    bottom: 15px;
+    padding-left: 40px;
+}
+
+.text-position-p{
+    position: relative;
+    padding-left: 15px;
+    bottom: 50px;
+    padding-top: 20px;
+}
+
+.form-group {
+    border-radius: 8px;
+    margin: 12px;
+}
+
+.form-control {
+    position: relative;
+    background-color: #EFF0F2;
+    border-color: #EFF0F2;
+}
+
+.form-control-user {
+  font-size: 0.8rem;
+  border-radius: 8px;
+  height: 40px;
+  width: 400px;
+}
+
+button {
+    color: white;
+}
+
+button:hover {
+    color: white;
+}
+
+.btn-close{
+    position: relative;
+    right: 25px;
+}
+
+.btn{
+    position: relative;
+    width: 400px;
+    margin-left: 40px;
+    bottom: 40px;
+}
