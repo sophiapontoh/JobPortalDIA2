@@ -16,7 +16,7 @@
                 </div>
                 <p class="text-secondary text-gray-900 mb-4">Email</p>
                 <div class="form-group">
-                    <input matInput formControlName="jobseekerEmail" type="email" class="form-control form-control-user"
+                    <input formControlName="jobseekerEmail" type="email" class="form-control form-control-user"
                         id="exampleInputEmail" aria-describedby="emailHelp" placeholder="youremail@mail.com"
                         required>
                         <mat-icon class="icon-email"> email</mat-icon>
@@ -27,7 +27,7 @@
                 </div>
                 <p class="text-secondary text-gray-900 mb-4 position">Password</p>
                 <div class="form-group">
-                    <input matInput [type]="hide ? 'password' : 'text'" 
+                    <input [type]="hide ? 'password' : 'text'" 
                         formControlName="jobseekerPassword" class="form-control form-control-user position" 
                         id="exampleInputPassword" placeholder="Enter your password" minlength="8" required="">
                         <mat-icon class="icon-eye" matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -50,7 +50,7 @@
                     </button>
                 </div>
             </form>
-            <div class="text-center text3"> Don’t have any account?
+            <div class="text-center text3 text-position"> Don’t have any account?
                 <a (click)="signUp()" class="small" type="button"> Sign Up For Free!</a>
             </div>
         </div>

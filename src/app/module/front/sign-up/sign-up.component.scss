@@ -20,6 +20,7 @@ $biru_card : #ECF3FF;
   @media (max-width: 767.98px) {
     img {
       height: 400px;
+      width: 400px;
       padding: 20px 0 20px 0;
     }
   }
@@ -33,10 +34,6 @@ $biru_card : #ECF3FF;
 
 }
 
-.form1{
-    width: 250px;
-}
-
 .h4 {
   font-weight: 900px;
   padding-left: 11px;
@@ -46,19 +43,6 @@ $biru_card : #ECF3FF;
   color: #FFFFFF;
   position: relative;
   font-weight: 900;
-}
-
-.text1 {
-  padding-top: 60px;
-  padding-left: 100px;
-  padding-right: 100px;
-  line-height: 20px;
-  padding-bottom: 679px;
-}
-
-.text2 {
-  font-weight: bold;
-  font-size: 25px;
 }
 
 .text-secondary {
@@ -74,14 +58,14 @@ $biru_card : #ECF3FF;
   bottom: 20px;
 }
 
-.text-color{
-  color: #EB5757;
+.text-position-response {
+  position: relative;
+  bottom: 50px;
 }
 
-.text-second{
+.text-position-response2 {
   position: relative;
-  font-size: 12px;
-  font-weight: 500;
+  bottom: 80px;
 }
 
 .text-three{
@@ -110,10 +94,6 @@ $biru_card : #ECF3FF;
 }
 
 @media (min-width: 500px) {
-  .text2 {
-    font-size: 20px;
-  }
-
   .text-secondary {
     font-size: 13px;
   }
@@ -127,23 +107,6 @@ $biru_card : #ECF3FF;
   left: 1162px;
   top: 253px;
   font-size: 16px;
-}
-
-.text-right {
-  font-style: normal;
-  font-size: 12px;
-  text-decoration: underline;
-  text-align-last: right;
-  font-weight: 600;
-  line-height: 20px;
-  margin-left: 300px;
-}
-
-@media (min-width: 500px) {
-  .text-right {
-    font-size: 12px;
-    margin-left: 260px;
-  }
 }
 
 .text-weight {
@@ -163,16 +126,6 @@ $biru_card : #ECF3FF;
   margin: 12px;
 }
 
-.text3 {
-  color: #95979D;
-  font-size: 12px;
-  font-weight: 500;
-}
-
-.small {
-  font-weight: 500;
-}
-
 .form-control {
   display: relative;
   background-color: #EFF0F2;
@@ -184,20 +137,17 @@ $biru_card : #ECF3FF;
   font-size: 0.8rem;
   border-radius: 8px;
   height: 40px;
+  width: 480px;
 }
 
-.firstname{
-  position: relative;
-  width: 240px;
-  margin-left: 12px;
-  margin-top: 10px;
+.text3 {
+  color: #95979D;
+  font-size: 12px;
+  font-weight: 500;
 }
 
-.lastname{
-  position: relative;
-  left: 268px;
-  width: 240px;
-  bottom: 66px;
+.small {
+  font-weight: 500;
 }
 
 .text-last1{
@@ -218,7 +168,7 @@ $biru_card : #ECF3FF;
   background-color: #ECF3FF;
   text-align: center;
   border-radius: 36px;
-  width: 500px;
+  width: 480px;
   margin-left: 12px;
 }
 
@@ -252,6 +202,7 @@ $biru_card : #ECF3FF;
 .btn-block {
   border-radius: 36px;
   height: 10px;
+  width: 400px;
 }
 
 .btn-text {
@@ -262,3 +213,23 @@ $biru_card : #ECF3FF;
   margin-bottom: 12px;
 }
 
+.icon-eye {
+  position: relative;
+  left: 450px;
+  bottom: 50px;
+  cursor: pointer;
+}
+
+.icon-eye2 {
+  position: relative;
+  left: 450px;
+  bottom: 80px;
+  cursor: pointer;
+}
+
+.icon {
+  position: relative;
+  left: 440px;
+  bottom: 30px;
+  width: 40px;
+}

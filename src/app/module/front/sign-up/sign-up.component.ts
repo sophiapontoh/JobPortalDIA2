@@ -18,6 +18,8 @@ export class SignUpComponent implements OnInit {
   data: any;
   submitted: boolean = false;
   registerModel = new RegisterModel();
+  hide = true;
+  hide2 = true;
   isLoading = false;
 
   toggleLoading = () => {
@@ -47,11 +49,11 @@ export class SignUpComponent implements OnInit {
   onRegister() {
     this.registerService.postRegister(this.registerModel.formGroupRegister.value).subscribe(
       (response) => {
-        this.registerService.saveRegisterData(response.data);
-        this.verifyEmailService.sendVerificationMail(response.data);
-        this.submitted = true;
+        this.registerService.saveRegisterData(response.data)
+        this.verifyEmailService.sendVerificationMail(response.data)
+        this.submitted = true
         this.router.navigate(['verif'],{queryParams:{data:this.registerModel.formGroupRegister.controls['jobseekerEmail'].value}})
-        this.toastr.success('Success', '');
+        this.toastr.success('Success', '')
       },
       (error) => {
         this.toastr.error('Failed', 'Email is already registered', {

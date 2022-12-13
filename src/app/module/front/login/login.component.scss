@@ -14,7 +14,9 @@ $biru_card : #ECF3FF;
   margin-top: 20px;
   
   img {
+    margin-left: 10px;
     height: 500px;
+    width: 500px;
   }
 
   @media (max-width: 767.98px) {
@@ -209,6 +211,7 @@ $biru_card : #ECF3FF;
   font-size: 0.8rem;
   border-radius: 8px;
   height: 40px;
+  width: 500px;
 }
 
 .login-form{
@@ -220,6 +223,7 @@ $biru_card : #ECF3FF;
   position: relative;
   left: 450px;
   bottom: 50px;
+  cursor: pointer;
 }
 
 .icon-email {
@@ -231,4 +235,9 @@ $biru_card : #ECF3FF;
 .position2 {
   position: relative;
   right: 12px;
+}
+
+.text-position {
+  position: relative;
+  bottom: 15px;
 }
