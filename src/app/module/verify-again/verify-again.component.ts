@@ -40,7 +40,7 @@ export class VerifyAgainComponent implements OnInit {
       (response) => {
         this.submitted = true;
         this.verifyEmailService.sendVerificationMail(response.data);
-        this.toastr.success('Email has been send', 'Success');
+        this.toastr.success('Email has been send!', 'Success');
       },
       (error) => {
       }
@@ -49,16 +49,4 @@ export class VerifyAgainComponent implements OnInit {
     this.toastr.error('', 'Error');
   }
 }
-
-  // sendingEmailAgain() {
-  //   this.verifyEmailService.sendVerificationMail(this.verifModel.formGroupRegister.value).subscribe(
-  //     (response) => {
-  //       this.verifyEmailService.sendVerificationMail(response.data);
-  //       this.submitted = true;
-  //       this.toastr.success('Email has been send!', 'Success');
-  //     },
-  //     (error) => {
-  //     }
-  //   )
-  // }
 }

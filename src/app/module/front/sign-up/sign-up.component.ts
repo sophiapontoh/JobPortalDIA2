@@ -4,8 +4,6 @@ import { RegisterService } from 'src/app/services/register/register.service';
 import { RegisterModel } from './model/register.model';
 import { VerifyEmailService } from 'src/app/services/verify-email/verify-email.service';
 import { ToastrService } from 'ngx-toastr';
-import { ModalVerifyComponent } from 'src/app/shared/component/modal/modal-verify/modal-verify.component';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { LoaderService } from 'src/app/services/loader/loader.service';
 
 @Component({
@@ -36,7 +34,6 @@ export class SignUpComponent implements OnInit {
     private readonly verifyEmailService: VerifyEmailService,
     private readonly router: Router,
     private toastr: ToastrService,
-    private readonly modalService: NgbModal,
     public loader: LoaderService
   ) { }
 
@@ -53,10 +50,10 @@ export class SignUpComponent implements OnInit {
         this.verifyEmailService.sendVerificationMail(response.data)
         this.submitted = true
         this.router.navigate(['verif'],{queryParams:{data:this.registerModel.formGroupRegister.controls['jobseekerEmail'].value}})
-        this.toastr.success('Success', '')
+        this.toastr.success('Email has been send!', 'Success')
       },
       (error) => {
-        this.toastr.error('Failed', 'Email is already registered', {
+        this.toastr.error('Email is already registered', 'Failed', {
           timeOut: 3000,
         });
       }
@@ -82,12 +79,6 @@ export class SignUpComponent implements OnInit {
   onLogin() {
     this.router.navigate(['login'])
   }
-
-  openModalVerify() {
-    const modal = this.modalService.open(
-      ModalVerifyComponent, { size: 'md' }
-  )}
-
   
 }
 

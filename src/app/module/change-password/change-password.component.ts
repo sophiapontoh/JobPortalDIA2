@@ -33,20 +33,6 @@ export class ChangePasswordComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    // this.activatedRoute.paramMap.subscribe((data: any) => {
-    //   let token = data,
-    //     params = {
-    //       token: token,
-    //     }
-    //   console.log(data.params)
-    //   this.loginService.forgotPassword(params).subscribe(
-    //     (response: any) => {
-    //       this.changePasswordModel.formGroupChangePassword.patchValue(response.data);
-    //       console.log(response.data)
-    //     }
-    //     )
-    //   }
-    // )
   }
 
   newPassword(): void {

@@ -11,6 +11,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ComponentModule } from './component/component.module';
+import { ModalAddSalaryComponent } from './component/modal/modal-add-salary/modal-add-salary.component';
+import { ModalAddSalaryModule } from './component/modal/modal-add-salary/modal-add-salary.module';
 
 @NgModule({
   declarations: [

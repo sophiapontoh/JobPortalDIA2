@@ -8,7 +8,6 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { InterceptorService } from './services/interceptor/interceptor.service';
 import { ToastrModule } from 'ngx-toastr';
-import { ModalVerifyModule } from './shared/component/modal/modal-verify/modal-verify.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
@@ -23,8 +22,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     BrowserAnimationsModule,
     NgbModule,
     ToastrModule.forRoot(),
-    ModalVerifyModule,
-    FontAwesomeModule,
+    FontAwesomeModule
   ],
   providers: [
     {

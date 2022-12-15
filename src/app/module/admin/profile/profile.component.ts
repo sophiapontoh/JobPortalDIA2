@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalAddSalaryComponent } from 'src/app/shared/component/modal/modal-add-salary/modal-add-salary.component';
 import { LoginService } from '../../../services/login/login.service';
 import { ModalAddEducationComponent } from '../../../shared/component/modal/modal-add-education/modal-add-education.component';
 import { ModalAddExperienceComponent } from '../../../shared/component/modal/modal-add-experience/modal-add-experience.component';
@@ -15,8 +16,7 @@ import { ProfileModel } from './model/profile.model';
 export class ProfileComponent implements OnInit {
 
   profileModel = new ProfileModel();
-
-  profile: any;
+  profile: any = {};
   id: any;
 
   constructor(
@@ -63,5 +63,10 @@ export class ProfileComponent implements OnInit {
     );
   }
 
+  openEditSalary() {
+    const modal = this.modalService.open(
+      ModalAddSalaryComponent, { size: 'lg' }
+    );
+  }
 
 }

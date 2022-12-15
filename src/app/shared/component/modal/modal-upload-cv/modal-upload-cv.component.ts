@@ -55,20 +55,16 @@ export class ModalUploadCvComponent implements OnInit {
     let ext = null;
     fileSize = (Math.round(this.selectedFile.size / 1024));
     if (fileSize >= 10024) {
-      // this.invisible = false;
       this.file_error = "File size limited to 10mb"
     } else {
       ext = this.fileName.split('?')[0].split('.').pop();
       if (ext == 'pdf' || ext == 'PDF') {
         this.invisible = true;
       } else {
-        // this.invisible = false;
         this.file_error = "please enter valid pdf file";
       }
     }
   }
-
-
 
   upload() {
     this.onUpload()

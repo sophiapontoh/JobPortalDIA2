@@ -6,14 +6,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { ModalAddExperienceComponent } from './modal/modal-add-experience/modal-add-experience.component';
 import { ModalAddEducationComponent } from './modal/modal-add-education/modal-add-education.component';
 import { ModalPersonalInformationComponent } from './modal/modal-personal-information/modal-personal-information.component';
-import { ModalVerifyModule } from './modal/modal-verify/modal-verify.module'
+import { ModalAddSalaryModule } from './modal/modal-add-salary/modal-add-salary.module';
 
 @NgModule({
   declarations: [
     ModalUploadCvComponent,
     ModalAddExperienceComponent,
     ModalAddEducationComponent,
-    ModalPersonalInformationComponent
+    ModalPersonalInformationComponent,
+    
   ],
   imports: [
     CommonModule,
@@ -22,9 +23,9 @@ import { ModalVerifyModule } from './modal/modal-verify/modal-verify.module'
     HttpClientModule
   ],
   exports: [
-    ModalVerifyModule,
     FormsModule,
     ReactiveFormsModule,
+    ModalAddSalaryModule
   ]
 })
 export class ComponentModule { }

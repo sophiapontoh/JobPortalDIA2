@@ -3,7 +3,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { RegisterService } from 'src/app/services/register/register.service';
 import { VerifyEmailService } from 'src/app/services/verify-email/verify-email.service';
-import { ModalVerifyComponent } from 'src/app/shared/component/modal/modal-verify/modal-verify.component';
 import { RegisterModel } from '../front/sign-up/model/register.model';
 import { VerifModel } from './model/verif.model';
 
@@ -45,11 +44,6 @@ export class VerifComponent implements OnInit {
         }
       )
     }
-
-    openModalVerify() {
-      const modal = this.modalService.open(
-        ModalVerifyComponent, { size: 'md' }
-    )}
 
     sendingEmail() {
       this.router.navigate(['verify-again'])
